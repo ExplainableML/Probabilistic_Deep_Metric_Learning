@@ -1,5 +1,6 @@
 ### Standard DML criteria
 from criteria import triplet, margin, proxynca, npair, oproxy, proxyvmf_panc
+from criteria import proxynca_l2, proxynca_cos, proxyvmf_kl, proxyvmf, proxynca_nivmf
 from criteria import lifted, contrastive, softmax
 from criteria import angular, snr, histogram, arcface
 from criteria import softtriplet, multisimilarity, quadruplet
@@ -16,6 +17,11 @@ def select(loss, opt, to_optim, batchminer=None, embeds=None, targets=None):
               'margin':margin,
               'proxynca':proxynca,
               'proxyvmf_panc':proxyvmf_panc,
+              "proxynca_l2":proxynca_l2,
+              "proxynca_cos":proxynca_cos,
+              "proxynca_kl":proxyvmf_kl,
+              "proxyvmf":proxyvmf,
+              "proxynca_nivmf":proxynca_nivmf,
               'oproxy':oproxy,
               'npair':npair,
               'angular':angular,

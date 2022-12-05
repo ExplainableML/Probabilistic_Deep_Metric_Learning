@@ -115,7 +115,7 @@ def loss_specific_parameters(parser):
     parser.add_argument('--loss_proxyvmf_conclrmulti',  default=50000, type=float, help='Learning Rate multiplier for Proxy concentrations in proxyvmf')
     parser.add_argument('--loss_proxyvmf_templrmulti',  default=500, type=float, help='Learning Rate multiplier for Proxy concentrations in proxyvmf')
     parser.add_argument('--loss_proxyvmf_concentration',default=10, type=float, help='Init value for the concentrations of proxies in proxyvmf')
-    parser.add_argument('--loss_proxyvmf_rho',          default=0.5, type=float, help='Value for which norm to use in the PPK similarity metric in proxyvmf')
+    parser.add_argument('--loss_proxyvmf_rho',          default=1, type=float, help='Value for which norm to use in the PPK similarity metric in proxyvmf')
     parser.add_argument('--loss_proxyvmf_warmstart',    action="store_true",     help="Whether to initialize proxies as average embeddings")
     parser.add_argument('--loss_proxyvmf_learnable_temp',action="store_true", default=True, help = "Whether the temperature parameter should be trained")
     parser.add_argument('--loss_proxyvmf_temp', default=0.01, type=float, help="Temperature to apply to the logits")
